@@ -4,7 +4,6 @@ require "rvm/capistrano"
 set :application, "just_inform_web"
 set :scm, "git"
 set :repository, "https://github.com/GSA-OCSIT/just_inform_web.git"
-#set :branch, 'myusa_app'
 set :use_sudo, false
 #set :deploy_via, :remote_cache
 
