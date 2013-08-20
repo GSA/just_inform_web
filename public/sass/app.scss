@@ -44,4 +44,25 @@
 // @import "foundation/components/tooltips";
 // @import "foundation/components/dropdown";
 
-ol { padding:0 0 0 20px; }
+@import url(http://fonts.googleapis.com/css?family=Goudy+Bookletter+1911);
+
+h1 { font-family: 'Goudy Bookletter 1911', serif; font-weight: normal; 
+  a { color:#122237; }
+}
+
+.last_updated { background-color:#bf343d; }
+
+.panel { background-color: #fafafa; }
+ol { margin-top: 1em; padding:1em;
+  li { border-bottom: 1px solid #ddd; padding:1em 0; }
+  li.last { border-bottom: none; }
+}
+
+h3.ribbon { background-color:#2f4853; color:#fff; height:46px; font-family: 'Goudy Bookletter 1911', serif; font-weight: normal; margin:0 0 0 -32px; padding:10px 10px 10px 28px; width:262px; }
+.left-triangle {border-top:12px solid #2c3437;border-left:12px solid transparent;border-left:12px solid transparent;clear:left;float:left;height:0;margin:0 0 0 -32px;width:0;}
+
+.footer {
+  p {
+    img { padding-right:10px; width:110px; }
+  }
+}

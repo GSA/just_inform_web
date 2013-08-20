@@ -11,21 +11,32 @@ class JustInformWeb < Sinatra::Base
   before do
     headers "Content-Type" => "text/html; charset=utf-8"
   end
-
+  
+  helpers do
+    def render_page
+      p = JustInform::Parser.new
+      puts 'parsing burdens at ' + Time.now.to_s
+      @burden = p.top(25, :burden)
+      puts 'parsing cost at ' + Time.now.to_s
+      @cost = p.top(25, :cost)
+      puts 'parsing responses at ' + Time.now.to_s
+      @responses = p.top(25, :responses)
+      
+      puts 'creating content'
+      @content = erb(:index, locals: {updated_at: Time.now})
+      puts 'setting cache'
+      CACHE.set("index", @content, 86400)
+    end
+  end
+  
   get '/' do
     begin
-      content = CACHE.get("index")
+      @content = CACHE.get("index")
       puts 'using cache - ' + Time.now.to_s
     rescue Memcached::NotFound
-      p = JustInform::Parser.new
-      @burden = p.top(25, :burden)
-      @cost = p.top(25, :cost)
-      @responses = p.top(25, :responses)
-
-      content = erb(:index)
-      CACHE.set("index", content, 86400)
+      render_page
     end
 
-    content
+    @content
   end
 end

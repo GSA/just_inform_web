@@ -1,7 +1,7 @@
 <div class="row">
   <div class="large-12 columns">
-    <h2>Just Inform Daily Top 10 Lists</h2>
-    <p>We parse the form reports from <a href='http://www.reginfo.gov/'>RegInfo.gov</a> daily and provided updated top 10 lists</p>
+    <h1>Just Inform Top 25 Government Forms</h1>
+    <p>We parse the form reports from <a href='http://www.reginfo.gov/'>RegInfo.gov</a> and provide updated lists daily. Last updated <span class='success label'><%=  updated_at.strftime('%A, %b %d') %></span></p>
     <hr />
   </div>
 </div>
@@ -9,32 +9,44 @@
 <div class="row">
   <div class="large-4 columns">
     <div class="panel">
-      <h3>Burden Hours</h3>
+      <h3 class='ribbon'>Burden Hours</h3>
+      <div class='left-triangle'></div>
       <ol>
         <% @burden.each do |form| %>
-          <li><%= form[0]%> hours<br /><%= form[1].title %></li>
+          <li <%= "class='last'" if form == @burden.last %>><span class='radius secondary label'><%= form[0]%> hours</span><br /><em><%= form[1].title.gsub('.........','') %></em></li>
         <% end %>
       </ol>
     </div>
   </div>
   <div class="large-4 columns">
     <div class="panel">
-      <h3>Cost</h3>
+      <h3 class='ribbon'>Cost</h3>
+      <div class='left-triangle'></div>
       <ol>
         <% @cost.each do |form| %>
-          <li>$<%= form[0]%><br /><%= form[1].title %></li>
+          <li <%= "class='last'" if form == @cost.last %>><span class='radius secondary label'>$<%= form[0]%></span><br /><em><%= form[1].title %></em></li>
         <% end %>
       </ol>
     </div>
   </div>
   <div class="large-4 columns">
     <div class="panel">
-      <h3>Responses</h3>
+      <h3 class='ribbon'>Responses</h3>
+      <div class='left-triangle'></div>
       <ol>
         <% @responses.each do |form| %>
-          <li><%= form[0]%> responses<br /><%= form[1].title %></li>
+          <li <%= "class='last'" if form == @responses.last %>><span class='radius secondary label'><%= form[0]%> responses</span><br /><em><%= form[1].title %></em></li>
         <% end %>
       </ol>
     </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="large-12 columns footer">
+    <p>
+      <a href='https://my.usa.gov' title='MyUSA Homepage'><img src='images/logo.png' alt='MyUSA logo'/></a>
+      <small>A project by the <a href='https://my.usa.gov' title='MyUSA Homepage'>MyUSA</a> Team</small>
+    </p>
   </div>
 </div>

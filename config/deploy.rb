@@ -1,11 +1,13 @@
 require 'bundler/capistrano'
 require "rvm/capistrano"
+require "whenever/capistrano"
 
 set :application, "just_inform_web"
 set :scm, "git"
 set :repository, "https://github.com/GSA-OCSIT/just_inform_web.git"
 set :use_sudo, false
 #set :deploy_via, :remote_cache
+set :whenever_command, "bundle exec whenever"
 
 set :user, "ubuntu"
 set :deploy_to, "/var/www/#{application}"
