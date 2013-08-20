@@ -18,12 +18,12 @@ class JustInformWeb < Sinatra::Base
       puts 'using cache - ' + Time.now.to_s
     rescue Memcached::NotFound
       p = JustInform::Parser.new
-      @burden = p.top(5, :burden)
-      @cost = p.top(5, :cost)
-      @responses = p.top(5, :responses)
+      @burden = p.top(25, :burden)
+      @cost = p.top(25, :cost)
+      @responses = p.top(25, :responses)
 
       content = erb(:index)
-      CACHE.set("index", content, 600)
+      CACHE.set("index", content, 86400)
     end
 
     content

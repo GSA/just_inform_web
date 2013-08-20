@@ -34,7 +34,7 @@ GEM
     fssm (0.2.10)
     highline (1.6.19)
     i18n (0.6.5)
-    just_inform (0.0.5)
+    just_inform (0.0.6)
       nokogiri (~> 1.6.0)
     memcached (1.7.0)
     method_source (0.8.2)
