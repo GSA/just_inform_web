@@ -6805,41 +6805,104 @@ a.th {
 }
 
 /* line 49, ../sass/app.scss */
+#forkongithub a {
+  background: #2f4853;
+  color: #fff;
+  text-decoration: none;
+  font-family: arial, sans-serif;
+  text-align: center;
+  font-weight: bold;
+  padding: 5px 40px;
+  font-size: 1rem;
+  line-height: 2rem;
+  position: relative;
+  transition: 0.5s;
+}
+
+/* line 50, ../sass/app.scss */
+#forkongithub a:hover {
+  background: #2c3437;
+  color: #fff;
+}
+
+/* line 51, ../sass/app.scss */
+#forkongithub a::before, #forkongithub a::after {
+  content: "";
+  width: 100%;
+  display: block;
+  position: absolute;
+  top: 1px;
+  left: 0;
+  height: 1px;
+  background: #fff;
+}
+
+/* line 52, ../sass/app.scss */
+#forkongithub a::after {
+  bottom: 1px;
+  top: auto;
+}
+
+@media screen and (min-width: 1048px) {
+  /* line 55, ../sass/app.scss */
+  #forkongithub {
+    position: absolute;
+    display: block;
+    top: 0;
+    right: 0;
+    width: 240px;
+    overflow: hidden;
+    height: 200px;
+  }
+
+  /* line 56, ../sass/app.scss */
+  #forkongithub a {
+    width: 240px;
+    position: absolute;
+    top: 48px;
+    right: -48px;
+    white-space: nowrap;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.8);
+  }
+}
+/* line 60, ../sass/app.scss */
 h1 {
   font-family: 'Goudy Bookletter 1911', serif;
   font-weight: normal;
 }
-/* line 50, ../sass/app.scss */
+/* line 61, ../sass/app.scss */
 h1 a {
   color: #122237;
 }
 
-/* line 53, ../sass/app.scss */
+/* line 64, ../sass/app.scss */
 .last_updated {
   background-color: #bf343d;
 }
 
-/* line 55, ../sass/app.scss */
+/* line 66, ../sass/app.scss */
 .panel {
   background-color: #fafafa;
 }
 
-/* line 56, ../sass/app.scss */
+/* line 67, ../sass/app.scss */
 ol {
   margin-top: 1em;
   padding: 1em;
 }
-/* line 57, ../sass/app.scss */
+/* line 68, ../sass/app.scss */
 ol li {
   border-bottom: 1px solid #ddd;
   padding: 1em 0;
 }
-/* line 58, ../sass/app.scss */
+/* line 69, ../sass/app.scss */
 ol li.last {
   border-bottom: none;
 }
 
-/* line 61, ../sass/app.scss */
+/* line 72, ../sass/app.scss */
 h3.ribbon {
   background-color: #2f4853;
   color: #fff;
@@ -6851,7 +6914,7 @@ h3.ribbon {
   width: 262px;
 }
 
-/* line 62, ../sass/app.scss */
+/* line 73, ../sass/app.scss */
 .left-triangle {
   border-top: 12px solid #2c3437;
   border-left: 12px solid transparent;
@@ -6863,7 +6926,7 @@ h3.ribbon {
   width: 0;
 }
 
-/* line 66, ../sass/app.scss */
+/* line 77, ../sass/app.scss */
 .footer p img {
   padding-right: 10px;
   width: 110px;
