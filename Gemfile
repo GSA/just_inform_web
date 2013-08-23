@@ -1,7 +1,9 @@
 source 'https://rubygems.org'
 
+gem 'json'
 gem 'just_inform'
 gem 'memcached'
+gem 'pry'
 gem 'rake'
 gem 'sinatra', '~> 1.3.1'
 gem 'sinatra-contrib'
