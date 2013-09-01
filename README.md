@@ -1,6 +1,6 @@
 # What Is Just Inform
 
-[Just Inform Web] is a simple web app (built with [Sinatra]) that uses the [Just Inform] gem to parse data from [RegInfo.gov] to generate top 25 government forms lists based on burden hours, cost, and number of responses.
+[Just Inform Web] is a simple web app (built with [Sinatra]) that uses the [Just Inform] gem to parse data from [RegInfo.gov] and generate a list of the top 25 government forms based on burden hours, cost, and number of responses.
 
 ## Basic Usage
 
