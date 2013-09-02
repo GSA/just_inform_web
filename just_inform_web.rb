@@ -12,7 +12,7 @@ class JustInformWeb < Sinatra::Base
   before do
     headers "Content-Type" => "text/html; charset=utf-8"
   end
-  
+
   helpers Sinatra::JSON
   helpers do
     def render_page
