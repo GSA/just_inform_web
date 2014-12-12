@@ -24,12 +24,12 @@
 * Add tests with 100% coverage
 * Add detail view for each form that reveals all known info about that form.
 
-## License
-[MIT License]
-  
-  [Just Inform Web]: https://github.com/GSA-OCSIT/just_inform_web
-  [Sinatra]: http://www.sinatrarb.com/
-  [Just Inform]: https://github.com/GSA-OCSIT/just_inform
-  [RegInfo.gov]: http://www.reginfo.gov
-  [MIT License]: https://github.com/GSA-OCSIT/just_inform_web/blob/master/LICENSE.md
-  [README]: https://github.com/GSA-OCSIT/just_inform_web/blob/master/README.md
+## Public domain
+
+This project is in the public domain within the United States, and
+copyright and related rights in the work worldwide are waived through
+the [CC0 1.0 Universal public domain dedication](https://creativecommons.org/publicdomain/zero/1.0/).
+
+All contributions to this project will be released under the CC0
+dedication. By submitting a pull request, you are agreeing to comply
+with this waiver of copyright interest.
