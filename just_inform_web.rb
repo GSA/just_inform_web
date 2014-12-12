@@ -42,7 +42,6 @@ class JustInformWeb < Sinatra::Base
         result_hash = {}
         result_hash[:rank] = i+1
         result_hash[:title] = f[1].title
-        binding.pry
         result_hash[:data] = f[1].raw_data.to_s
         results << result_hash
       end
